@@ -1,0 +1,47 @@
+MDScreen:
+    name:"main"
+    MDFloatLayout:
+        md_bg_color:1,1,1,1
+        FitImage:
+            source:"C:\\Users\\User\\Desktop\\KivyProjects\\MwalimuApp\\pic1.jpg"
+            size_hint:.5,.5
+            pos_hint:{"center_x":.5,"center_y":.7}
+        MDLabel:
+            text:"\"Unlocking Knowledge, Igniting Curiosity - Where Learning Takes Flight\""
+            font_size:"23sp"
+            pos_hint:{"center_y":.38}
+            halign:"center"
+            theme_text_color:"Custom"
+            text_color:127/255,127/255,127/255,1
+
+        MDFlatButton:
+            text:"LOGIN"
+            size_hint:.66,.065
+            pos_hint:{"center_x":.5,"center_y":.2}
+            on_release:
+                root.manager.transition.direction="left"
+                root.manager.current="Login_up_page"
+            canvas.before:
+                Color:
+                    rgba:52/255,0,231/255,1
+                RoundedRectangle:
+                    pos:self.pos
+                    size:self.size
+                    radius:[5]
+
+        MDFlatButton:
+            text:"SIGN UP"
+            size_hint:.66,.065
+            pos_hint:{"center_x":.5,"center_y":.07}
+            on_release:
+                root.manager.transition.direction="left"
+                root.manager.current="Sign_up_page"
+            canvas.before:
+                Color:
+                    rgba:52/255,0,231/255,1
+                Line:
+                    width:1.2
+                    rounded_rectangle:self.x,self.y,self.width,self.height,5,5,5,5,100
+
+
+
